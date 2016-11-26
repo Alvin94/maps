@@ -25,8 +25,8 @@ io.on('connection',funtion(socket){
        io.sockets.emit('usuarios conectado',countsocket);
       });
 //cerrar coneccion
-socket.on('disconnect',funtion(){
+/*socket.on('disconnect',funtion(){
 	  coutsocket--;//
 	  console.log('usuario desconectado');//mensaje en consola
           io.sockets.emit('usuario desconectado')//sms a todos los clientes
-	  });
+	  });*/
