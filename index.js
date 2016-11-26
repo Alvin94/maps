@@ -15,3 +15,7 @@ app.get('/',function(req,res){
 http.listen(port,function(){
 	console.log('Escuchado en el puerto: '+port)
 });
+
+http.listen(port, funcition() {
+	    console.log('Escuchando en el puerto:'+port)//mensajeconsola
+	    });
