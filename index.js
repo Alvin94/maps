@@ -15,3 +15,18 @@ app.get('/',function(req, res){
 http.listen(port,function(){
 	console.log('Escuchando en el puerto: ' + port);
 });
+
+var countsocket=0;//contador de conecciones al server
+
+io.on('connection',funtion(socket){
+      console.log('usuario conectado...');
+      countsocket++;
+//emitiendo sms de los usuarios conectados
+       io.sockets.emit('usuarios conectado',countsocket);
+      });
+//cerrar coneccion
+socket.on('disconnect',funtion(){
+	  coutsocket--;//
+	  console.log('usuario desconectado');//mensaje en consola
+          io.sockets.emit('usuario desconectado')//sms a todos los clientes
+	  });
